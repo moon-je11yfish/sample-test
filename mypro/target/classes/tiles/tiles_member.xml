@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+  <definition name="baseLayout"  template="/WEB-INF/views/common/layout.jsp">
+      <put-attribute name="title" value="" />
+      <put-attribute name="header" value="/WEB-INF/views/common/header.jsp" />
+      <put-attribute name="side" value="/WEB-INF/views/common/side.jsp" />
+      <put-attribute name="body" value="" />
+      <put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp" />
+   </definition>
+
+   <definition name="/main" extends="baseLayout">
+      <put-attribute name="title" value="메인페이지" />
+      <put-attribute name="body" value="/WEB-INF/views/main.jsp" />
+   </definition>
+
+<!-- 	<definition name="home">
+      <put-attribute name="title" value="메인페이지" />
+      <put-attribute name="body" value="/WEB-INF/views/home.jsp" />
+   </definition> -->
+
+   <definition name="/planning" extends="baseLayout">
+      <put-attribute name="title" value="연습계획" />
+      <put-attribute name="body" value="/WEB-INF/views/planning.jsp" />
+   </definition>
+   <definition name="/loginForm" extends="baseLayout">
+      <put-attribute name="title" value="로그인" />
+      <put-attribute name="body" value="/WEB-INF/views/loginForm.jsp" />
+   </definition>
+   <definition name="/signup" extends="baseLayout">
+      <put-attribute name="title" value="회원가입" />
+      <put-attribute name="body" value="/WEB-INF/views/signup.jsp" />
+   </definition>
+   <definition name="/notice" extends="baseLayout">
+      <put-attribute name="title" value="공지사항" />
+      <put-attribute name="body" value="/WEB-INF/views/notice.jsp" />
+   </definition>
+   
+      <definition name="/listMembers" extends="baseLayout">
+      <put-attribute name="title" value="회원목록창" />
+      <put-attribute name="body" value="/WEB-INF/views/listMembers.jsp" />
+   </definition>
+   
+         <definition name="/popup" extends="baseLayout">
+      <put-attribute name="title" value="팝업" />
+      <put-attribute name="body" value="/WEB-INF/views/popup.jsp" />
+   </definition>
+   
+ <!--   <definition name="/searchMemberList">
+      <put-attribute name="title" value="회원목록창" />
+      <put-attribute name="body" value="/WEB-INF/views/searchMemberList.jsp" />
+   </definition>
+   
+     <definition name="/login">
+      <put-attribute name="title" value="로그인창" />
+      <put-attribute name="body" value="/WEB-INF/views/listMembers.jsp" />
+   </definition>
+
+    
+   <definition name="/loginForm">
+      <put-attribute name="title" value="로그인창" />
+      <put-attribute name="body" value="/WEB-INF/views/loginForm.jsp" />
+   </definition>
+      
+
+   <definition name="/memberForm">
+      <put-attribute name="title" value="회원등록창" />
+      <put-attribute name="body" value="/WEB-INF/views/memberForm.jsp" />
+   </definition>
+
+   <definition name="/memberUpdateForm">
+      <put-attribute name="title" value="회원상세창" />
+      <put-attribute name="body" value="/WEB-INF/views/memberUpdateForm.jsp" />
+   </definition> -->
+</tiles-definitions>
