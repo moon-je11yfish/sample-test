@@ -47,13 +47,12 @@
 	</beans:bean> 
 
 <!-- 인터셉터 실습 설정 -->
-<!--     
-    
+
    <mvc:interceptors>
     	<mvc:interceptor>
 	      <mvc:mapping path="/*/*.do"/>
-	   <beans:bean class="com.myspring.pro27.member.interceptor.ViewNameInterceptor" />
+	   <beans:bean class="com.myspring.mypro.common.interceptor.ViewNameInterceptor" />
 	</mvc:interceptor>
 </mvc:interceptors>
- -->
+
 </beans:beans>

@@ -28,6 +28,7 @@ public class HomeController extends MultiActionController implements HomeControl
 	@Autowired
 	MemberVO memberVO;
 	
+	//단순 site 구동용 코드
 	@RequestMapping(value="/main", method=RequestMethod.GET)
 	public ModelAndView main(HttpServletRequest request, HttpServletResponse response) throws Exception{
 		
@@ -36,7 +37,6 @@ public class HomeController extends MultiActionController implements HomeControl
 		
 		return mav;
 	}
-	
 	@RequestMapping(value="/planning", method=RequestMethod.GET)
 	public ModelAndView planning(HttpServletRequest request, HttpServletResponse response) throws Exception{
 		String viewName = getViewName(request);
@@ -64,8 +64,7 @@ public class HomeController extends MultiActionController implements HomeControl
 		ModelAndView mav = new ModelAndView(viewName);
 		
 		return mav;
-	}
-	
+	}	
 	@RequestMapping(value="/popup", method=RequestMethod.GET)
 	public ModelAndView popup(HttpServletRequest request, HttpServletResponse response) throws Exception{
 		String viewName = getViewName(request);
@@ -73,6 +72,8 @@ public class HomeController extends MultiActionController implements HomeControl
 		
 		return mav;
 	}
+	
+	// site구동 + 로직구동
 	@RequestMapping(value="/listMembers.do", method= {RequestMethod.GET, RequestMethod.POST})
 	public ModelAndView listMembers(HttpServletRequest request, HttpServletResponse response) throws Exception{
 		
@@ -163,6 +164,7 @@ public class HomeController extends MultiActionController implements HomeControl
 		return mav;
 	}
 	
+	// getViewName
 	private String getViewName(HttpServletRequest request) throws Exception {
 		String contextPath = request.getContextPath();
 		
